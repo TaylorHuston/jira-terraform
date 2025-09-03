@@ -105,6 +105,10 @@ cat > $JIRA_HOME/dbconfig.xml <<'DBCONFIG'
 </jira-database-config>
 DBCONFIG
 
+# Ensure dbconfig.xml has correct permissions for Jira to update it
+chmod 660 $JIRA_HOME/dbconfig.xml
+chown jira:jira $JIRA_HOME/dbconfig.xml
+
 # Backup existing setenv.sh if it exists
 if [ -f "$JIRA_INSTALL/bin/setenv.sh" ]; then
     mv $JIRA_INSTALL/bin/setenv.sh $JIRA_INSTALL/bin/setenv.sh.backup
