@@ -1,0 +1,15 @@
+{
+  "name": "jira-terraform",
+  "description": "Terraform configuration for JIRA infrastructure",
+  "instructions": "This project manages JIRA infrastructure using Terraform. When working with Terraform files:\n- Follow HCL best practices\n- Use consistent formatting with terraform fmt\n- Validate changes with terraform validate\n- Plan changes before applying with terraform plan",
+  "tools": {
+    "bash": {
+      "commands": {
+        "format": "terraform fmt",
+        "validate": "terraform validate",
+        "plan": "terraform plan",
+        "apply": "terraform apply"
+      }
+    }
+  }
+}
